@@ -2,8 +2,7 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
 
 # ====== הכנס כאן את הטוקן שלך מטלגרם ======
-TOKEN = "8463024674:AAE4g4HoNkC8jdfsWqP-x6J-VpBL7UloA-I"
-
+os.environ["TOKEN"]
 # ====== רשימת החלפות מילים בעייתיות ======
 REPLACEMENTS = {
     "medical": "wellness",
