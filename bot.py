@@ -67,9 +67,12 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         await query.edit_message_text("❌ נשמר המקור. המודעה תעלה כמו שהיא (ייתכן שתיפסל).")
 
 def main():
-    app = Application.builder().token(TOKEN).build()
-    app.add_handler(CommandHandler("check", check))
-    app.add_handler(CallbackQueryHandler(button))
+    app = Application.builder().token(os.environ["TOKEN"]).build()
+
+    # כאן תוסיף handlers
+    # app.add_handler(CommandHandler("start", start))
+
+    print("Bot started...")
     app.run_polling()
 
 if __name__ == "__main__":
